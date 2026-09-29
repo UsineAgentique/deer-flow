@@ -125,3 +125,4 @@ EXPOSE 8001
 
 # Default command (can be overridden in docker-compose)
 CMD ["sh", "-c", "cd backend && PYTHONPATH=. uv run --no-sync uvicorn app.gateway.app:app --host 0.0.0.0 --port 8001"]
+RUN cp -n config.example.yaml config.yaml 2>/dev/null || true
